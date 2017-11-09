@@ -13,6 +13,8 @@ Vagrant.configure("2") do |config|
     	# Specify the base box
 	m.vm.box      = "ubuntu/xenial64"	
 	m.ssh.forward_agent = true
+	m.vm.network "public_network", use_dhcp_assigned_default_route: true
+        m.vm.network "forwarded_port", guest: 7077, host: 7077
 	m.vm.synced_folder "./provision/data", "/data", create: true, group: "ubuntu", owner: "ubuntu"
     end
 	
