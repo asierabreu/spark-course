@@ -1,41 +1,40 @@
 #!/bin/bash
 
-echo "--------------------------------"
-echo "Provisioning virtual machine ..."
-echo "--------------------------------"
+SW_DIR=./Software
 
-SW_DIR=./software/
-SPARK_PKG=spark-2.2.0-bin-hadoop2.7.tgz
-ZEPPL_PKG=zeppelin-0.7.3-bin-all.tgz
+echo "Provisioning virtual machine..."
 
-mkdir $SW_DIR
+# Create a directory for directly downloaded packages
+mkdir ${SW_DIR}
 
-# Java (open-jdk-8) installation (quietly -qq and pip messages from dpkg to dev null)
-echo "Installing open-jdk-8 ... please wait"
-apt-get -qq -o Dpkg::Use-Pty=0 install openjdk-8-jre-headless > /dev/null
+# Java (open-jdk-8)
+echo "Installing open-jdk-8 ..."
+apt-get install openjdk-8-jre-headless -y > /dev/null
 
-# Firefox
-echo "Installing Firefox Web Browser ... please wait"
-apt-get -qq -o Dpkg::Use-Pty=0 install firefox > /dev/null
+# Miniconda (Python with some extra interesting stuff) in silent mode , i.e, no prompts
+echo "Installing Anaconda (Python 3.6) ..."
+wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
+mv Anaconda3-5.0.1-Linux-x86_64.sh ${SW_DIR}
+cd ${SW_DIR}
+bash Anaconda3-5.0.1-Linux-x86_64.sh -b -p $HOME/${SW_DIR}/anaconda
+cd 
 
-# Python 3.6
-echo "Installing Python ... please wait"
-apt-get -qq -o Dpkg::Use-Pty=0 install python3 > /dev/null
+# Possible need to add Jupyter Notebook here
 
-# Uncomment below for installation : Spark 2.2.0 Download (with timeout) and (quiet) Installation if enabled 
-# echo "Installing Apache-Spark ... please wait"
-# wget --timeout 5 http://mirrors.ocf.berkeley.edu/apache/spark/spark-2.2.0/$SPARK_PKG
-# mv $SPARK_PKG $SW_DIR
-# tar zxf $SW_DIR/$SPARK_PKG -C $SW_DIR/	
+# Spark 2.2.0
+echo "Installing Spark 2.2.0 ..."
+wget https://www.apache.org/dyn/closer.lua/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
+mv spark-2.2.0-bin-hadoop2.7.tgz ${SW_DIR}
+cd ${SW_DIR}
+tar zxf spark-2.2.0-bin-hadoop2.7.tgz	
+cd 
 
-# Uncomment below for installation : Zepellin Download (with timeout) and (quiet) Installation 
-# echo "Installing Apache-Zepellin ... please wait"
-# wget --timeout 5 http://apache.cs.utah.edu/zeppelin/zeppelin-0.7.3/$ZEPPL_PKG
-# mv $ZEPPL_PKG $SW_DIR
-# tar zxf $SW_DIR/$ZEPPL_PKG -C $SW_DIR/	
-# fi
+# Possibly test minimally installation
+echo "Java   version : " $(java -version)
+echo "Python version : " $(java -version)
+echo "Spark  version : " $(java -version)
 
-echo "--------------------------------------"
-echo "Provisioning virtual machine finished!"
-echo "Type : 'vagrant ssh' to connect to your new VM"
-echo "--------------------------------------"
+
+echo "Finished provisioning."
+echo "Directly downloaded packages available at : ${HOME}/${SW_DIR}"
+
