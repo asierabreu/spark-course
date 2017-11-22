@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
 
     	# Shell provisioning (software installations)
     	config.vm.provision "shell" do |s|
-    		s.path = "provision/setup.sh"
+    		s.path = "provision/minimal_setup.sh"
     	end
 end
 
