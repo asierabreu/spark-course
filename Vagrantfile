@@ -14,8 +14,9 @@ Vagrant.configure("2") do |config|
 	config.vm.network :forwarded_port, guest: 7077, host: 7077, auto_correct: true
 
     	# Setup synced folder (possiblity to synch folders)
-    	config.vm.synced_folder "./data", "/data", create: true, group: "spark", owner: "spark"
-
+    	config.vm.synced_folder "./data", "/data", create: true, group: "1000", owner: "100"
+	config.vm.synced_folder "./scripts", "/scripts", create: true, group: "1000", owner: "100"
+	
     	# VM specific configs
     	config.vm.provider "virtualbox" do |v|
     		v.name = "master"
