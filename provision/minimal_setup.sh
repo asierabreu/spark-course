@@ -8,6 +8,10 @@ echo "Provisioning virtual machine..."
 echo "Installing ${JAVA_VERSION} ..."
 apt-get update && apt-get install $JAVA_VERSION -qq > /dev/null && apt-get clean 
 
+# Firefox
+echo "Installing firefox ..."
+apt-get update && apt-get install firefox -qq > /dev/null && apt-get clean
+
 # copy executables to bin
 cp /spark-course/scripts/start_notebook.sh /usr/local/bin/
 cp /spark-course/scripts/start_zeppelin.sh /usr/local/bin/
