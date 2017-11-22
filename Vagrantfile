@@ -34,8 +34,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     	# VM specific configuration (CPU and memory)
     	config.vm.provider "virtualbox" do |v|
     		v.name = "spark"
-		v.cpus = "2"
-    		v.memory = "1024"
+		v.cpus = "4"
+    		v.memory = "6144"
     	end
 
     	# Shell provisioning (software installations)
