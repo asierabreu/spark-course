@@ -23,7 +23,7 @@ apt-get install firefox -qq && apt-get clean
 
 # Anaconda (Python with some extra interesting stuff) in silent mode , i.e, no prompts
 echo "Installing Anaconda (Python 3.6) ..."
-curl -O https://repo.continuum.io/archive/$CONDA_VERSION
+curl -O -# https://repo.continuum.io/archive/$CONDA_VERSION
 bash $CONDA_VERSION -b -p $CONDA_DIR
 rm $CONDA_VERSION
 
@@ -54,7 +54,11 @@ cp /spark-course/scripts/start_zeppelin.sh /usr/local/bin/
 
 # update bashrc to include JAVA_HOME
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/' >> .bashrc
-echo 'export PATH=/usr/local/software/conda/bin:/usr/local/software/apache/spark/bin:/usr/local/software/apache/spark/sbin:/usr/local/software/apache/zeppelin/bin:$PATH' >> .bashrc
+echo 'export SW_HOME=/usr/local/software'
+echo 'export SPARK_HOME=$SW_HOME/apache/spark'
+echo 'export ZEPPELIN_HOME=$SW_HOME/apache/zeppelin'
+echo 'export CONDA_HOME=$SW_HOME/conda'
+echo 'export PATH=$CONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$ZEPPELIN_HOME/bin:$PATH' >> .bashrc
 
 echo "Finished provisioning."
 echo "(0) : type 'vagrant ssh' to login to the newly created VM "
