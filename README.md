@@ -36,7 +36,7 @@ $SPARK_HOME/bin/pyspark
 
 ## Hands-On Labs
 
-These labs will be executed using a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine). The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
+These labs will be executed using the [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine) created in the Minimal Setup. The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
 
 1. Java Open JDK 1.8
 2. Apache Spark 2.2.0 (including Hadoop 2.6)
