@@ -43,8 +43,11 @@ These labs will be executed using the [Virtual Machine](https://en.wikipedia.org
 3. Anaconda Python 3.6
 4. Apache Zepellin 0.7.3
 
-In order to boot-up 
+In order to launch pyspark using jupyter notebook simple type:
 
+```
+start_notebook.sh
+```
 
 ## Software Installation (from scratch)
 
