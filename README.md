@@ -17,7 +17,7 @@ In order to boot-up the course virtual machine follow these steps:
 1. Install VirtualBox manager : [link](https://www.virtualbox.org/)
 2. Install Vagrant : [link](https://www.vagrantup.com/downloads.html)
 3. Install Git : [link](https://git-scm.com/downloads)
-4. Checkout the git repository :  
+4. Checkout the git repository to your computer:  
 ```
 git clone https://github.com/bla/spark-course
 ```
