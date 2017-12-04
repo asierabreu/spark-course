@@ -50,7 +50,7 @@ In order to boot-up
 
 Should you prefer to install all the software your own (beware it may take some time) follow these instructions:
 
-First follow steps [1-7] specified in the minimal setup section above
+First follow steps [1-5] specified in the Minimal Setup section above
 
 Then, once you have logged in to the new VM:
 
