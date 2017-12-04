@@ -10,7 +10,7 @@ This repository contains all necessary inputs to run the course hands-on labs.
 * **scripts** : useful scripts
 * **image** : a bootable VM image (see next section)
 
-## Minimal Setup
+## Software Setup
 
 In order to boot-up the course virtual machine follow these steps:
 
@@ -36,7 +36,7 @@ $SPARK_HOME/bin/pyspark
 
 ## Hands-On Labs
 
-These labs will be executed using the [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine) created in the Minimal Setup. The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
+These labs will be executed using the [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine) created in the Software Setup. The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
 
 1. Java Open JDK 1.8
 2. Apache Spark 2.2.0 (including Hadoop 2.6)
@@ -50,7 +50,7 @@ In order to boot-up
 
 Should you prefer to install all the software your own (beware it may take some time) follow these instructions:
 
-First follow steps [1-5] specified in the Minimal Setup section above
+First follow steps [1-5] specified in the Software Setup section above
 
 Then, once you have logged in to the new VM:
 
