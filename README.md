@@ -10,7 +10,7 @@ This repository contains all necessary inputs to run the course hands-on labs.
 * scripts : useful scripts
 * image : a bootable VM image (see next section)
 
-# Minimal Setup
+## Minimal Setup
 
 In order to boot-up the course virtual machine follow these steps:
 
@@ -21,26 +21,20 @@ In order to boot-up the course virtual machine follow these steps:
 ```
 git clone https://github.com/bla/spark-course
 ```
-5.Boot up the provide course image with VirtualBox : 
+5. Boot up the provide course image with Vagrant and wait for the VM to start-up. Then connect via ssh : 
 ```
 cd spark-course 
-vagrant up
-```
-6. Wait for the VM to start up
-
-7. Connect to the new VM via ssh :
-
-```
+vagrant up # now wait
 vagrant ssh
 ```
-8. Test Installation
+6. Test Installation
 
 Start up the pyspark shell
 ```
 $SPARK_HOME/bin/pyspark
 ```
 
-# Hands-On Labs
+## Hands-On Labs
 
 These labs will be executed using a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine). The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
 
