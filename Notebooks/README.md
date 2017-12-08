@@ -21,12 +21,10 @@ Jupyter Notebooks will be used as the default 'environment' for the hands-on ses
 A reminder of the necessary setup steps for running the course notebooks
 
 ```
-1. git clone https://github.com/asierabreu/spark-course # ONLY THE FIRST TIME
-2. cd spark-course
-3. vagrant up ( and wait )
-4. vagrant ssh
-5. bash_setup.sh
-6. start_notebook.sh
+1. cd spark-course
+2. vagrant ssh
+3. bash_setup.sh
+4. start_notebook.sh
 ```
 
 The later start-up a Jupyter notebook as the driver program of your spark application. The notebook is started up showing the contents of the Labs directory , just select the corresponding directory and notebook.
