@@ -38,6 +38,16 @@ You should see a PySpark shell appearing looking like this:
 
 <img src="images/pyspark-shell.png" width="700" height="400" align="centre">
 
+
+Start up a Scala spark shell
+```
+$SPARK_HOME/bin/spark-shell
+```
+
+You should see a Scala shell appearing looking like this:
+
+<img src="images/scala-shell.png" width="700" height="400" align="centre">
+
 ## Hands-On Labs
 
 These labs will be executed using the [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine) created in the Software Setup. The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
