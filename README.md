@@ -4,7 +4,7 @@ This repository contains all necessary inputs to run the course hands-on labs.
 
 ## Repository contents
 
-* **Notebooks** : contains corresponding Jupyter Notenbooks for each lab
+* **Notebooks** : contains Jupyter Notebooks for the hands-on Labs
 * **data** : contains input datasets for the labs
 * **provision** : holds the bash provisioning scripts for the Virtual Machine
 * **scripts** : useful scripts
