@@ -24,7 +24,7 @@ git clone https://github.com/bla/spark-course
 5. Boot up the provide course image with Vagrant and wait for the VM to start-up. Then connect via ssh : 
 ```
 cd spark-course 
-vagrant up # now wait
+vagrant up # now wait, note this may take up to 20 min depending on each machine
 vagrant ssh
 ```
 6. Test Installation
@@ -33,6 +33,10 @@ Start up the pyspark shell
 ```
 $SPARK_HOME/bin/pyspark
 ```
+
+You should see a PySpark sheep appearing looking like this:
+
+![pyspark-shell](https://github.com/asierabreu/images/pyspark-shell.png)
 
 ## Hands-On Labs
 
