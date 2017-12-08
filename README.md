@@ -61,6 +61,8 @@ These labs will be executed using the [Virtual Machine](https://en.wikipedia.org
 In order to launch pyspark using jupyter notebook simple type:
 
 ```
+cd spark-course
+vagrant ssh
 start_notebook.sh
 ```
 
