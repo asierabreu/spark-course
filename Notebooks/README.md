@@ -5,9 +5,9 @@ Jupyter Notebooks will be used as the default 'environment' for the hands-on ses
 
 ## References
 
-The Jupyter official docs : http://jupyter-notebook.readthedocs.io/en/stable/notebook.html
-Some Jupyter Notebooks : https://try.jupyter.org/
-Spark API reference : https://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.RDD
+1. The Jupyter official docs : http://jupyter-notebook.readthedocs.io/en/stable/notebook.html
+2. Some Jupyter Notebooks : https://try.jupyter.org/
+3. Spark API reference : https://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.RDD
 
 ## Setup steps
 
@@ -22,7 +22,7 @@ A reminder of the necessary setup stesp:
 
 ## Starting up a Notebook
 
-A convenience script is provided : <i>start_notebook.sh<i> that will launch a PySpark shell and use the Jupyter Notebook as the driver program. On a terminal within the virtual machine (not your local computer) type:
+A convenience script is provided : <i>start_notebook.sh</i> that will launch a PySpark shell and use the Jupyter Notebook as the driver program. On a terminal within the virtual machine (not your local computer) type:
 
 * start_notebook.sh 
 
@@ -31,6 +31,7 @@ This will start-up a Jupyter notebook as the driver program of your spark applic
 ## Labs description
 
 |Nb.|Id|Description|Status|
+|---|--|-----------|------|
 |1. |Lab1 | Introduction to Apache Spark  | Released |
 |2. |Lab2 | | - |
 |3. |Lab3 | | - |
