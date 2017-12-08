@@ -26,6 +26,9 @@ cd spark-course
 vagrant up # *now wait, note this may take up to 15-20 min depending on machine*
 vagrant ssh
 ```
+
+**Note** : subsequent VM boot-ups only require : vagrant ssh from the spark-course dir
+
 6. Test Installation
 
 Start up the pyspark shell
@@ -45,8 +48,6 @@ $SPARK_HOME/bin/spark-shell
 You should see a Scala shell appearing looking like this:
 
 <img src="images/scala-shell.png" width="700" height="400" align="centre">
-
-*Note:* subsequent vm start-ups only require : vagrant ssh from the spark-course directory 
 
 ## Hands-On Labs
 
