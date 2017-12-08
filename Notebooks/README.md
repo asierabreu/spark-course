@@ -13,12 +13,14 @@ Jupyter Notebooks will be used as the default 'environment' for the hands-on ses
 
 You have downloaded this repository to your local computer and are now connected to the Virtual Machine.
 
-A reminder of the necessary setup stesp:
+A reminder of the necessary setup steps:
 
-1. Download this repository to your local computer : git clone https://github.com/asierabreu/spark-course
+```
+1. git clone https://github.com/asierabreu/spark-course
 2. cd spark-course
 3. vagrant up ( and wait )
 4. vagrant ssh
+```
 
 ## Starting up a Notebook
 
@@ -32,15 +34,15 @@ This will start-up a Jupyter notebook as the driver program of your spark applic
 
 |Id|Description|Status|
 |--|-----------|------|
-|Lab1 | Introduction to Apache Spark  | <span style="color:green"> *Released!* </span> |
-|Lab2 | | <span style="color:gray"> Not Available </span> |
-|Lab3 | | <span style="color:gray"> Not Available </span> 
-|Lab4 | |<span style="color:gray"> Not Available </span> 
-|Lab5 | | <span style="color:gray"> Not Available </span> 
-|Lab6 | | <span style="color:gray"> Not Available </span> 
-|Lab7 | | <span style="color:gray"> Not Available </span> 
-|Lab8 | | <span style="color:gray"> Not Available </span> 
-|Lab9 | | <span style="color:gray"> Not Available </span> 
-|Lab10| | <span style="color:gray"> Not Available </span> 
-|Lab11| | <span style="color:gray"> Not Available </span> 
-|Lab12| | <span style="color:gray"> Not Available </span> 
+|Lab1 | Introduction to Apache Spark  | **Released!** |
+|Lab2 | | Not Available |
+|Lab3 | | Not Available | 
+|Lab4 | | Not Available |
+|Lab5 | | Not Available | 
+|Lab6 | | Not Available | 
+|Lab7 | | Not Available | 
+|Lab8 | | Not Available | 
+|Lab9 | | Not Available |
+|Lab10| | Not Available | 
+|Lab11| | Not Available | 
+|Lab12| | Not Available | 
