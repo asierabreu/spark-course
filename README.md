@@ -8,7 +8,6 @@ This repository contains all necessary inputs to run the course hands-on labs.
 * **data** : contains input datasets for the labs
 * **provision** : holds the bash provisioning scripts for the Virtual Machine
 * **scripts** : useful scripts
-* **image** : a bootable VM image (see next section)
 
 ## Software Setup
 
@@ -24,7 +23,7 @@ git clone https://github.com/bla/spark-course
 5. Boot up the provide course image with Vagrant and wait for the VM to start-up. Then connect via ssh : 
 ```
 cd spark-course 
-vagrant up # now wait, note this may take up to 20 min depending on each machine
+vagrant up # *now wait, note this may take up to 15-20 min depending on machine*
 vagrant ssh
 ```
 6. Test Installation
@@ -38,7 +37,6 @@ You should see a PySpark shell appearing looking like this:
 
 <img src="images/pyspark-shell.png" width="700" height="400" align="centre">
 
-
 Start up a Scala spark shell
 ```
 $SPARK_HOME/bin/spark-shell
@@ -47,6 +45,8 @@ $SPARK_HOME/bin/spark-shell
 You should see a Scala shell appearing looking like this:
 
 <img src="images/scala-shell.png" width="700" height="400" align="centre">
+
+*Note:* subsequent vm start-ups only require : vagrant ssh from the spark-course directory 
 
 ## Hands-On Labs
 

@@ -2,16 +2,26 @@
 
 JAVA_VERSION='openjdk-8-jre-headless'
 SPARK_VERSION='spark-2.2.0-bin-hadoop2.7'
+ZEPPELIN_VERSION='zeppelin-0.7.3-bin-all'
 CONDA_VERSION='Anaconda3-5.0.1-Linux-x86_64.sh'
-ZEPEL_VERSION='zeppelin-0.7.3-bin-all'
+EXTENSION='.tgz'
+SPARK_TGZ=$SPARK_VERSION$EXTENSION
+ZEPPELIN_TGZ=$ZEPPELIN_VERSION$EXTENSION
 
 APACHE_DIR='/usr/local/software/apache'
-mkdir $APACHE_DIR
 CONDA_DIR='/usr/local/software/conda'
 
 echo "Provisioning virtual machine..."
 
 apt-get update
+
+# Create required dirs
+mkdir -p $APACHE_DIR
+
+if [ ! -d "$APACHE_DIR" ];then
+  echo 'could not create directory : $APACHE_DIR aborting installation' 
+  exit
+fi
 
 # Java
 echo "Installing ${JAVA_VERSION} ..."
@@ -29,22 +39,28 @@ rm $CONDA_VERSION
 
 # Spark 2.2.0
 echo "Installing Spark ${SPARK_VERSION} ..."
-curl -O -# http://mirror.cogentco.com/pub/apache/spark/spark-2.2.0/$SPARK_VERSION'.tgz'
-mv $SPARK_VERSION $APACHE_DIR
+curl -O -# http://mirror.cogentco.com/pub/apache/spark/spark-2.2.0/$SPARK_TGZ
+if [ ! -f $SPARK_TGZ ]; then
+     echo "Problems downloading $SPARK_VERSION aborting installation"
+     exit
+fi
+mv $SPARK_TGZ $APACHE_DIR/
 cd $APACHE_DIR
-tar zxf $SPARK_VERSION
+tar zxf $SPARK_TGZ
 ln -s $SPARK_VERSION spark
-rm $SPARK_VERSION'.tgz'
 cd 	
 
 # Zepellin 
-echo "Installing Zeppelin ${ZEPEL_VERSION} ..."
-curl -O -# http://mirrors.advancedhosters.com/apache/zeppelin/zeppelin-0.7.3/$ZEPEL_VERSION'.tgz'
-mv $ZEPEL_VERSION $APACHE_DIR
+echo "Installing Zeppelin ${ZEPPELIN_VERSION} ..."
+curl -O -# http://ftp.cixug.es/apache/zeppelin/zeppelin-0.7.3/$ZEPPELIN_TGZ
+if [ ! -f $ZEPPELIN_TGZ ]; then
+    echo "Problems downloading $ZEPPELIN_VERSION aborting installation"
+    exit
+fi
+mv $ZEPPELIN_TGZ $APACHE_DIR/
 cd $APACHE_DIR
-tar zxf $ZEPEL_VERSION
-ln -s $ZEPEL_VERSION zeppelin
-rm $ZEPEL_VERSION'.tgz'
+tar zxf $ZEPPELIN_TGZ
+ln -s $ZEPPELIN_VERSION zeppelin
 cd 	
 
 # update path
@@ -52,16 +68,15 @@ cd
 cp /spark-course/scripts/start_notebook.sh /usr/local/bin/
 cp /spark-course/scripts/start_zeppelin.sh /usr/local/bin/
 
-# update bashrc to include JAVA_HOME
-echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/' >> .bashrc
-echo 'export SW_HOME=/usr/local/software'
-echo 'export SPARK_HOME=$SW_HOME/apache/spark'
-echo 'export ZEPPELIN_HOME=$SW_HOME/apache/zeppelin'
-echo 'export CONDA_HOME=$SW_HOME/conda'
-echo 'export PATH=$CONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$ZEPPELIN_HOME/bin:$PATH' >> .bashrc
+# copy Notebooks
+cp -r /spark-course/Notebooks $HOME
 
+# update local
+echo 'LC_ALL="en_US.UTF-8"' >> /etc/environment
+echo 'LANGUAGE="en_US.UTF-8"' >> /etc/environment
+
+echo ""
 echo "Finished provisioning."
-echo "(0) : type 'vagrant ssh' to login to the newly created VM "
-echo " --> Once you have logged into the VM : "
-echo "(1) : type 'start_notebook.sh' to launch PySpark (using Jupyter Notebook)"
-echo "(2) : type 'start_zepellin.sh' to launch Zeppelin server"
+echo "Type 'vagrant ssh' to login to the newly created VM "
+echo "Then type 'source /spark-course/scripts/bash_setup.sh'"
+echo ""
