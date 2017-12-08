@@ -1,7 +1,14 @@
-# Jupyter Notebooks 
 
-Jupyter Notebooks will be used as the default 'environment' for the hands-on sessions. Note we may occassionally use Apache Zeppelin as a demonstrator of it's capabilities.
+# Hands-on Labs
 
+These labs will be executed using the Virtual Machine created in the Software Setup. The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
+
+1.Java Open JDK 1.8
+2.Apache Spark 2.2.0 (including Hadoop 2.6)
+3.Anaconda Python 3.6
+4.Apache Zepellin 0.7.3
+
+Jupyter Notebooks will be used as the default 'environment' for the hands-on sessions. We may occassionally use Apache Zeppelin as a demonstrator of it's capabilities.
 
 ## References
 
@@ -11,24 +18,18 @@ Jupyter Notebooks will be used as the default 'environment' for the hands-on ses
 
 ## Setup steps
 
-You have downloaded this repository to your local computer and are now connected to the Virtual Machine.
-
-A reminder of the necessary setup steps:
+A reminder of the necessary setup steps for running the course notebooks
 
 ```
-1. git clone https://github.com/asierabreu/spark-course
+1. (only if not alredy copied) git clone https://github.com/asierabreu/spark-course
 2. cd spark-course
 3. vagrant up ( and wait )
 4. vagrant ssh
+5. bash_setup.sh
+6. start_notebook.sh
 ```
 
-## Starting up a Notebook
-
-A convenience script is provided : <i>start_notebook.sh</i> that will launch a PySpark shell and use the Jupyter Notebook as the driver program. On a terminal within the virtual machine (not your local computer) type:
-
-* start_notebook.sh 
-
-This will start-up a Jupyter notebook as the driver program of your spark application. The notebook is started up showing the contents of the Labs directory , just select the corresponding directory and notebook.
+The later start-up a Jupyter notebook as the driver program of your spark application. The notebook is started up showing the contents of the Labs directory , just select the corresponding directory and notebook.
 
 ## Labs description
 
