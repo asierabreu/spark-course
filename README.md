@@ -36,7 +36,7 @@ $SPARK_HOME/bin/pyspark
 
 You should see a PySpark sheep appearing looking like this:
 
-![pyspark-shell](https://github.com/asierabreu/spark-course/images/pyspark-shell.png)
+<img src="images/pyspark-shell.png" width="700" height="400" align="centre">
 
 ## Hands-On Labs
 
