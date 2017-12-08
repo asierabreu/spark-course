@@ -3,10 +3,10 @@
 
 These labs will be executed using the Virtual Machine created in the Software Setup. The VM runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
 
-1.Java Open JDK 1.8
-2.Apache Spark 2.2.0 (including Hadoop 2.6)
-3.Anaconda Python 3.6
-4.Apache Zepellin 0.7.3
+1. Java Open JDK 1.8
+2. Apache Spark 2.2.0 (including Hadoop 2.6)
+3. Anaconda Python 3.6
+4. Apache Zepellin 0.7.3
 
 Jupyter Notebooks will be used as the default 'environment' for the hands-on sessions. We may occassionally use Apache Zeppelin as a demonstrator of it's capabilities.
 
@@ -21,7 +21,7 @@ Jupyter Notebooks will be used as the default 'environment' for the hands-on ses
 A reminder of the necessary setup steps for running the course notebooks
 
 ```
-1. (only if not alredy copied) git clone https://github.com/asierabreu/spark-course
+1. git clone https://github.com/asierabreu/spark-course # ONLY THE FIRST TIME
 2. cd spark-course
 3. vagrant up ( and wait )
 4. vagrant ssh
