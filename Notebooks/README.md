@@ -30,17 +30,17 @@ This will start-up a Jupyter notebook as the driver program of your spark applic
 
 ## Labs description
 
-|Nb.|Id|Description|Status|
-|---|--|-----------|------|
-|1. |Lab1 | Introduction to Apache Spark  | Released |
-|2. |Lab2 | | - |
-|3. |Lab3 | | - |
-|4. |Lab4 | | - |
-|5. |Lab5 | | - |
-|6. |Lab6 | | - |
-|7. |Lab7 | | - |
-|8. |Lab8 | | - |
-|9. |Lab9 | | - |
-|10.|Lab10| | - |
-|11.|Lab11| | - |
-|12.|Lab12| | - |
+|Id|Description|Status|
+|--|-----------|------|
+|Lab1 | Introduction to Apache Spark  | <span style="color:green"> *Released!* </span> |
+|Lab2 | | <span style="color:gray"> Not Available </span> |
+|Lab3 | | <span style="color:gray"> Not Available </span> 
+|Lab4 | |<span style="color:gray"> Not Available </span> 
+|Lab5 | | <span style="color:gray"> Not Available </span> 
+|Lab6 | | <span style="color:gray"> Not Available </span> 
+|Lab7 | | <span style="color:gray"> Not Available </span> 
+|Lab8 | | <span style="color:gray"> Not Available </span> 
+|Lab9 | | <span style="color:gray"> Not Available </span> 
+|Lab10| | <span style="color:gray"> Not Available </span> 
+|Lab11| | <span style="color:gray"> Not Available </span> 
+|Lab12| | <span style="color:gray"> Not Available </span> 
