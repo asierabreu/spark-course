@@ -67,6 +67,7 @@ cd
 # copy executables to bin
 cp /spark-course/scripts/start_notebook.sh /usr/local/bin/
 cp /spark-course/scripts/start_zeppelin.sh /usr/local/bin/
+cp /spark-course/scripts/bash_setup.sh /usr/local/bin/
 
 # copy Notebooks
 cp -r /spark-course/Notebooks $HOME
