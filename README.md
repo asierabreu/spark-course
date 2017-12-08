@@ -34,7 +34,7 @@ Start up the pyspark shell
 $SPARK_HOME/bin/pyspark
 ```
 
-You should see a PySpark sheep appearing looking like this:
+You should see a PySpark shell appearing looking like this:
 
 <img src="images/pyspark-shell.png" width="700" height="400" align="centre">
 
