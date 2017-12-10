@@ -33,7 +33,8 @@ The later start-up a Jupyter notebook as the driver program of your spark applic
 
 |Id|Description|Status|
 |--|-----------|------|
-|Lab1 | Introduction to Apache Spark  | **Released!** |
+|Lab0 | Introduction to Apache Spark  | **Released!** |
+|Lab1 | | Not Available |
 |Lab2 | | Not Available |
 |Lab3 | | Not Available | 
 |Lab4 | | Not Available |
