@@ -11,7 +11,8 @@ This repository contains all necessary inputs to run the course hands-on labs.
 
 ## Software Setup
 
-In order to boot-up the course virtual machine follow these steps:
+For the course hands-on sessions we will use a virtual machine that has all required software pre-installed. 
+In order to setup that VM you will first need to install the following software :
 
 1. Install VirtualBox manager : [link](https://www.virtualbox.org/)
 2. Install Vagrant : [link](https://www.vagrantup.com/downloads.html)
@@ -22,14 +23,15 @@ In order to boot-up the course virtual machine follow these steps:
 ```
 git clone https://github.com/bla/spark-course
 ```
-5. Boot up the provide course image with Vagrant and wait for the VM to start-up. Then connect via ssh : 
+
+**Note :** The previous steps [1-5] are only necessary to setup once. Further hands-on session will use the existing virtual machine downloaded to your computer.
+
+5. Boot-up the Virtual Machine (wait for it to start-up) then connect via ssh : 
 ```
 cd spark-course 
-vagrant up # *now wait, note this may take up to 15-20 min depending on machine*
+vagrant up # *now wait*
 vagrant ssh
 ```
-
-**Note** : subsequent VM boot-ups only require : vagrant ssh from the spark-course dir
 
 6. Test Installation
 
