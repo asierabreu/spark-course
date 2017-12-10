@@ -1,5 +1,5 @@
-# Apache Spark Course
-<img src="images/spark-logo-trademark.png" width="100" height="50" align="right">
+<img src="images/spark-logo-trademark.png" width="100" height="60" align="right">
+# Spark Course
 
 This repository contains all necessary inputs to run the course hands-on labs. 
 
