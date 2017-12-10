@@ -26,10 +26,10 @@ git clone https://github.com/bla/spark-course
 
 **Note :** The previous steps [1-5] are only necessary to setup once. Further hands-on session will use the existing virtual machine downloaded to your computer.
 
-5. Boot-up the Virtual Machine (wait for it to start-up) then connect via ssh : 
+5. Boot-up the Virtual Machine. The first time VM will be provisioned with software which may take up to 15 min. When completed connect to it via ssh : 
 ```
 cd spark-course 
-vagrant up # *now wait*
+vagrant up # *now wait for machine to be provisioned*
 vagrant ssh
 ```
 
