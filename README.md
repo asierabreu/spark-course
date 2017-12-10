@@ -1,4 +1,5 @@
-# Spark Course
+# Apache Spark Course
+<img src="images/spark-logo-trademark.png" width="100" height="50" align="right">
 
 This repository contains all necessary inputs to run the course hands-on labs. 
 
