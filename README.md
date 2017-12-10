@@ -54,68 +54,19 @@ You should see a Scala shell appearing looking like this:
 
 ## (Optional) Software Installation from scratch
 
-Should you prefer to install all the software your own (beware it may take some time) follow these instructions:
+Should you prefer to install all the software on your own computer follow these instructions:
 
-First follow steps [1-5] specified in the Software Setup section above
-
-Then, once you have logged in to the new VM:
-
-0. Update ubuntu libs
+1. Install Java [link](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+2. Install Anaconda [link](https://www.anaconda.com/download/#macos)
+3. Install Apache Spark [link](https://spark.apache.org/downloads.html)
+4. Install Apache Zeppelin [link](https://zeppelin.apache.org/download.html) 
+5. Setup JAVA_HOME and SPARK_HOME
 ```
-apt-get update
-mkdir  /usr/local/software/apache
+export JAVA_HOME=$Path_to_Your_Java_Installation
+export SPARK_HOME=$Path_to_Your_Spark_Installation
+export ZEPPELIN_HOME=$Path_to_Your_Zeppelin_Installation/zeppelin
+export PATH=$CONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$ZEPPELIN_HOME/bin:$PATH
 ```
-
-1. Install Java 
-```
-sudo apt-get install openjdk-8-jre-headless -qq && apt-get clean
-```
-2. Install Firefox
-```
-sudo apt-get install firefox -qq && apt-get clean
-```
-3. Install Anaconda
-```
-curl -O -# https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-bash Anaconda3-5.0.1-Linux-x86_64.sh -b -p /usr/local/software/conda
-```
-4. Install Spark
-```
-curl -O -# http://mirror.cogentco.com/pub/apache/spark/spark-2.2.0/spark-2.2.0-bin-hadoop2.7.tgz
-mv spark-2.2.0-bin-hadoop2.7.tgz /usr/local/software/apache
-cd /usr/local/software/apache
-tar zxf spark-2.2.0-bin-hadoop2.7.tgz
-ln -s spark-2.2.0-bin-hadoop2.7.tgz spark
-rm spark-2.2.0-bin-hadoop2.7.tgz
-cd 	
-```
-5. Install Zepellin
-```
-curl -O -# http://mirrors.advancedhosters.com/apache/zeppelin/zeppelin-0.7.3/zeppelin-0.7.3-bin-all.tgz
-mv zeppelin-0.7.3-bin-all /usr/local/software/apache
-cd /usr/local/software/apache
-tar zxf zeppelin-0.7.3-bin-all.tgz
-ln -s zeppelin-0.7.3-bin-all zeppelin
-rm zeppelin-0.7.3-bin-all.tgz
-cd 	
-```
-6. Setup JAVA_HOME and SPARK_HOME
-```
-echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/' >> .bashrc
-echo 'export SW_HOME=/usr/local/software'
-echo 'export SPARK_HOME=$SW_HOME/apache/spark'
-echo 'export ZEPPELIN_HOME=$SW_HOME/apache/zeppelin'
-echo 'export CONDA_HOME=$SW_HOME/conda'
-echo 'export PATH=$CONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$ZEPPELIN_HOME/bin:$PATH' >> .bashrc
-
-```
-7. Copy executables
-
-```
-cp /spark-course/scripts/start_notebook.sh /usr/local/bin/
-cp /spark-course/scripts/start_zeppelin.sh /usr/local/bin/
-```
-
 8. Test installation
 
 Start-up pyspark shell
