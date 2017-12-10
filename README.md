@@ -16,7 +16,9 @@ In order to boot-up the course virtual machine follow these steps:
 1. Install VirtualBox manager : [link](https://www.virtualbox.org/)
 2. Install Vagrant : [link](https://www.vagrantup.com/downloads.html)
 3. Install Git : [link](https://git-scm.com/downloads)
-4. Checkout the git repository to your computer:  
+4. **Only Windows** : Install Putty : [link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+5. Checkout the git repository to your computer:  
+
 ```
 git clone https://github.com/bla/spark-course
 ```
@@ -50,7 +52,7 @@ You should see a Scala shell appearing looking like this:
 <img src="images/scala-shell.png" width="700" height="400" align="centre">
 
 
-## Software Installation (from scratch)
+## (Optional) Software Installation from scratch
 
 Should you prefer to install all the software your own (beware it may take some time) follow these instructions:
 
