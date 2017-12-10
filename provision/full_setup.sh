@@ -25,11 +25,11 @@ fi
 
 # Java
 echo "Installing ${JAVA_VERSION} ..."
-apt-get install $JAVA_VERSION -qq && apt-get clean 
+apt-get install -qq -o=Dpkg::Use-Pty=0 $JAVA_VERSION > /dev/null && apt-get clean 
 
 # Java
 echo "Installing firefox ..."
-apt-get install firefox -qq && apt-get clean
+apt-get install -qq -o=Dpkg::Use-Pty=0 firefox > /dev/null  && apt-get clean
 
 # Anaconda (Python with some extra interesting stuff) in silent mode , i.e, no prompts
 echo "Installing Anaconda (Python 3.6) ..."
