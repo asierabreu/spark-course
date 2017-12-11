@@ -31,6 +31,7 @@ git clone https://github.com/bla/spark-course
 cd spark-course 
 vagrant up # *now wait for machine to be provisioned*
 vagrant ssh
+source /spark-course/scripts/bash_setup.sh
 ```
 
 6. Test Installation
