@@ -1,4 +1,3 @@
-# update bashrc to include JAVA_HOME
 #!/bin/bash
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
 export SW_HOME=/usr/local/software
