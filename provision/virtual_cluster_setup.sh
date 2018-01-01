@@ -40,7 +40,7 @@ cp /spark-course/provision/$SPARK_TGZ $SW_DIR
 cd $SW_DIR
 tar zxf $SPARK_TGZ
 ln -s $SPARK_VERSION spark
-mkdir -p "spark/logs"
+mkdir "spark/logs"
 cd 
 
 # Zeppelin 0.7.3
@@ -49,17 +49,20 @@ cd
 # cd $SW_DIR
 # tar zxf $ZEPPELIN_TGZ
 # ln -s $ZEPPELIN_VERSION zeppelin
-# mkdir -p "zeppelin/logs"
+# mkdir "zeppelin/logs"
 # cd 
 
 # Update ownership of directories
-chown ubuntu:ubuntu $SPARK_DIR -R
-chown ubuntu:ubuntu $CONDA_DIR -R
+chown ubuntu:ubuntu -R $SW_DIR
 
 # Setup Network
 source /spark-course/scripts/network_setup.sh
 
 # Setup Spark
 source /spark-course/scripts/spark_setup.sh
+
+# Copy some executables
+cp /spark-course/scripts/st*.sh /usr/bin/
+
 
 echo 'Provisioning finished'

@@ -14,7 +14,7 @@ echo "spark.master         spark://master:7077" >> $CONFIG_FILE
 echo "spark.serializer     org.apache.spark.serializer.KryoSerializer" >> $CONFIG_FILE
 echo "spark.driver.memory  2g" >> $CONFIG_FILE
 echo "spark.eventLog.enabled true" >> $CONFIG_FILE
-echo "spark.eventLog.dir  /home/ubuntu/spark_logs/" >> $CONFIG_FILE
+echo "spark.eventLog.dir  /home/ubuntu/software/spark/logs/" >> $CONFIG_FILE
 echo "spark.executor.memory  4g" >> $CONFIG_FILE
 # spark.executor.extraJavaOptions  -XX:+PrintGCDetails -Dkey=value -Dnumbers="one two three"
 
