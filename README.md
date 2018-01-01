@@ -31,6 +31,7 @@ git clone https://github.com/asierabreu/spark-course
 3. Boot-up the Virtual Cluster. The first time each VM will be provisioned with software which may take up to 20 min. When completed connect to it via ssh : 
 ```
 cd spark-course 
+./scripts/download_sw.sh (ONLY the first time)
 vagrant up # *now wait for cluster to be created and provisioned (20 min)*
 vagrant ssh driver
 source /spark-course/scripts/bash_setup.sh
