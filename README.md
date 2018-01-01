@@ -36,7 +36,16 @@ vagrant ssh driver
 source /spark-course/scripts/bash_setup.sh
 ```
 
-4. Test Installation
+4. Allow password-less access between cluster machines
+```
+ssh-keygen -t rsa (and press enter to all prompts)
+cat .ssh/id_pub.rsa >> .ssh/authorized_keys
+ssh-copy-id ubuntu@master
+ssh-copy-id ubuntu@slave1
+ssh-copy_id ubuntu@slave2
+```
+
+5. Test Installation
 
 Start up the pyspark shell
 ```
