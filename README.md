@@ -9,28 +9,28 @@ This repository contains all necessary inputs to run the course hands-on labs.
 * **provision** : holds the bash provisioning scripts for the Virtual Machine
 * **scripts** : useful scripts
 
-## Software Setup
+## Software Installation
 
-For the course hands-on sessions we will use a virtual machine that has all required software pre-installed. 
-In order to setup that VM you will first need to install the following software :
+For the course hands-on sessions we will use a virtual cluster that contains 4 Virtual Machines (VM) : 1 driver , 1 master and 2 slave machines.
+In order to setup that cluster you will first need to install the following software :
 
 1. Install VirtualBox manager : [link](https://www.virtualbox.org/)
 2. Install Vagrant : [link](https://www.vagrantup.com/downloads.html)
 3. Install Git : [link](https://git-scm.com/downloads)
 4. **Only Windows** : Install Putty : [link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-5. Checkout the git repository to your computer:  
+
+## Virtual Cluster Start-up
+
+1. Checkout the git repository to your computer:  
 
 ```
 git clone https://github.com/bla/spark-course
 ```
-
-**Note :** The previous steps [1-5] are only necessary to setup once. Further hands-on session will use the existing virtual machine downloaded to your computer.
-
-5. Boot-up the Virtual Machine. The first time VM will be provisioned with software which may take up to 15 min. When completed connect to it via ssh : 
+2. Boot-up the Virtual Cluster. The first time each VM will be provisioned with software which may take up to 15 min. When completed connect to it via ssh : 
 ```
 cd spark-course 
-vagrant up # *now wait for machine to be provisioned*
-vagrant ssh
+vagrant up # *now wait for cluster to be created and provisioned (15 min)*
+vagrant ssh driver
 source /spark-course/scripts/bash_setup.sh
 ```
 
