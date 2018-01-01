@@ -18,7 +18,7 @@ Jupyter Notebooks will be used as the default tool for the hands-on sessions. We
 
 ## Setup steps
 
-A reminder of the necessary setup steps for running the course notebooks
+Login to the virtual cluster and start-up a PySpark application with Jupyter Notebook as the driver program: 
 
 ```
 1. cd spark-course
