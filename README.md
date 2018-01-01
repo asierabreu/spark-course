@@ -21,12 +21,14 @@ In order to setup that cluster you will first need to install the following soft
 
 ## Virtual Cluster Start-up
 
-1. Checkout the git repository to your computer:  
+1. Open a terminal on your computer 
+
+2. Checkout the git repository to your computer:  
 
 ```
 git clone https://github.com/asierabreu/spark-course
 ```
-2. Boot-up the Virtual Cluster. The first time each VM will be provisioned with software which may take up to 15 min. When completed connect to it via ssh : 
+3. Boot-up the Virtual Cluster. The first time each VM will be provisioned with software which may take up to 15 min. When completed connect to it via ssh : 
 ```
 cd spark-course 
 vagrant up # *now wait for cluster to be created and provisioned (15 min)*
@@ -34,7 +36,7 @@ vagrant ssh driver
 source /spark-course/scripts/bash_setup.sh
 ```
 
-6. Test Installation
+4. Test Installation
 
 Start up the pyspark shell
 ```
@@ -70,7 +72,7 @@ export SPARK_HOME=$Path_to_Your_Spark_Installation
 export ZEPPELIN_HOME=$Path_to_Your_Zeppelin_Installation/zeppelin
 export PATH=$CONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$ZEPPELIN_HOME/bin:$PATH
 ```
-8. Test installation
+6. Test installation
 
 Start-up pyspark shell
 ```
