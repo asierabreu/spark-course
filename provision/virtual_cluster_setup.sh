@@ -21,18 +21,6 @@ if [ ! -d "$SW_DIR" ];then
   exit
 fi
 
-# Download (if necessary)
-DOWNLOAD="false"
-
-if [ $DOWNLOAD == "true" ];then
-  echo 'Downloading Python Anaconda3-5 ...'
-  curl -O -# https://repo.continuum.io/archive/$CONDA_INST
-  echo 'Downloading Apache Spark 2.2.0 ...'
-  curl -O -# http://mirror.cogentco.com/pub/apache/spark/spark-2.2.0/$SPARK_TGZ
-  echo 'Downloading Apache Zeppellin 0.7.3 ...'
-  curl -O -# http://apache.uvigo.es/zeppelin/zeppelin-0.7.3/$ZEPPELIN_TGZ
-fi 
-
 apt-get update
 
 # Network Time Protocol
