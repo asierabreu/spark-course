@@ -24,7 +24,7 @@ In order to setup that cluster you will first need to install the following soft
 1. Checkout the git repository to your computer:  
 
 ```
-git clone https://github.com/bla/spark-course
+git clone https://github.com/asierabreu/spark-course
 ```
 2. Boot-up the Virtual Cluster. The first time each VM will be provisioned with software which may take up to 15 min. When completed connect to it via ssh : 
 ```
