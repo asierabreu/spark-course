@@ -7,7 +7,7 @@ EXTENSION='.tgz'
 SPARK_TGZ=$SPARK_VERSION$EXTENSION
 ZEPPELIN_TGZ=$ZEPPELIN_VERSION$EXTENSION
 
-PROVISION_DIR="provision"
+PROVISION_DIR="spark-course/provision"
 if [ ! -d "$PROVISION_DIR" ];then
   echo 'please download first the git repo : git clone https://github.com/asierabreu/spark-course' 
   exit

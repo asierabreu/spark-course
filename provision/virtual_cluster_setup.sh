@@ -52,17 +52,17 @@ cd
 # mkdir "zeppelin/logs"
 # cd 
 
-# Update ownership of directories
-chown ubuntu:ubuntu -R $SW_DIR
-
 # Setup Network
 source /spark-course/scripts/network_setup.sh
 
 # Setup Spark
 source /spark-course/scripts/spark_setup.sh
 
+# Update ownership of directories and contents
+chown ubuntu:ubuntu -R $SW_DIR
+chown ubuntu:ubuntu $SPARK_DIR/conf/spark-defaults.conf
+
 # Copy some executables
 cp /spark-course/scripts/st*.sh /usr/bin/
-
 
 echo 'Provisioning finished'
