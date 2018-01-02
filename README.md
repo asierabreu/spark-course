@@ -23,25 +23,26 @@ In order to setup that cluster you will first need to install the following soft
 
 1. Open a terminal on your computer 
 
-2. Checkout the git repository to your computer:  
+2. Checkout the git repository to your computer and download required (spark-python) software:  
 
 ```
 git clone https://github.com/asierabreu/spark-course
+./spark-course/scripts/download_sw.sh
 ```
 3. Boot-up the Virtual Cluster. The first time each VM will be provisioned with software which may take up to 20 min. When completed connect to it via ssh : 
 ```
 cd spark-course 
-./scripts/download_sw.sh (ONLY the first time)
-vagrant up # *now wait for cluster to be created and provisioned (20 min)*
-vagrant ssh driver
-source /spark-course/scripts/bash_setup.sh
+vagrant up 
+*now wait for cluster to be created and provisioned (~20 min)*
 ```
 
-4. Allow password-less access between cluster machines
+4. Login to the cluster and setup password-less access between cluster machines
+
 ```
+vagrant ssh master
 ssh-keygen -t rsa (and press enter to all prompts)
 cat .ssh/id_pub.rsa >> .ssh/authorized_keys
-ssh-copy-id ubuntu@master
+ssh-copy-id ubuntu@driver
 ssh-copy-id ubuntu@slave1
 ssh-copy_id ubuntu@slave2
 ```
@@ -50,6 +51,7 @@ ssh-copy_id ubuntu@slave2
 
 Start up the pyspark shell
 ```
+source /spark-course/scripts/bash_setup.sh
 $SPARK_HOME/bin/pyspark
 ```
 
