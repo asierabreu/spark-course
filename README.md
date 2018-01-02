@@ -35,7 +35,7 @@ vagrant up
 *now wait for cluster to be created and provisioned (~20 min)*
 ```
 
-4. Login to the cluster and setup password-less access between cluster machines
+4. Login to the master VM and setup password-less access between cluster machines
 
 ```
 vagrant ssh master
@@ -44,12 +44,14 @@ cat .ssh/id_pub.rsa >> .ssh/authorized_keys
 ssh-copy-id ubuntu@driver
 ssh-copy-id ubuntu@slave1
 ssh-copy_id ubuntu@slave2
+exit
 ```
 
-5. Test Installation
+5. Login to the driver VM and test Installation
 
 Start up the pyspark shell
 ```
+vagrant ssh driver
 source /spark-course/scripts/bash_setup.sh
 $SPARK_HOME/bin/pyspark
 ```
