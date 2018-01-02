@@ -53,7 +53,7 @@ Start up the pyspark shell
 ```
 vagrant ssh driver
 source /spark-course/scripts/bash_setup.sh
-$SPARK_HOME/bin/pyspark
+$SPARK_HOME/bin/pyspark --master local[*]
 ```
 
 You should see a PySpark shell appearing looking like this:
@@ -62,7 +62,7 @@ You should see a PySpark shell appearing looking like this:
 
 Start up a Scala spark shell
 ```
-$SPARK_HOME/bin/spark-shell
+$SPARK_HOME/bin/spark-shell --master local[*]
 ```
 
 You should see a Scala shell appearing looking like this:
@@ -89,6 +89,6 @@ export PATH=$CONDA_HOME/bin:$SPARK_HOME/bin:$SPARK_HOME/sbin:$ZEPPELIN_HOME/bin:
 
 Start-up pyspark shell
 ```
-$SPARK_HOME/bin/pyspark
+$SPARK_HOME/bin/pyspark --master local[*]
 ```
 
