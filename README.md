@@ -22,7 +22,6 @@ In order to setup that cluster you will first need to install the following soft
 ## Virtual Cluster Start-up
 
 1. Open a terminal on your computer 
-
 2. Checkout the git repository to your computer and download required (spark-python) software:  
 
 ```
