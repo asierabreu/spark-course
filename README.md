@@ -11,31 +11,49 @@ This repository contains all necessary inputs to run the course hands-on labs.
 
 ## Software Installation
 
-For the course hands-on sessions we will use a virtual cluster that contains 4 Virtual Machines (VM) : 1 driver , 1 master and 2 slave machines.
-In order to setup that cluster you will first need to install the following software :
+For the course hands-on sessions we will use (mostly) a virtual machine.
+In order to create that vm you will first need to install the following software :
 
 1. Install VirtualBox manager : [link](https://www.virtualbox.org/)
 2. Install Vagrant : [link](https://www.vagrantup.com/downloads.html)
 3. Install Git : [link](https://git-scm.com/downloads)
 4. **Only Windows** : Install Putty : [link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-## Virtual Cluster Start-up
 
-1. Open a terminal on your computer 
-2. Checkout the git repository to your computer and download required (spark-python) software:  
+
+## Virtual Machine Start-up
+
+1. Checkout the git repository to your computer
+2. Download required software (Spark + Python + Zeppelin)
+3. Boot-up the Virtual Machine 
+4. Login to the Virtual Machine
 
 ```
 git clone https://github.com/asierabreu/spark-course
 ./spark-course/scripts/download_sw.sh
+cd spark-course
+vagrant up
+vagrant ssh
 ```
-3. Boot-up the Virtual Cluster. The first time each VM will be provisioned with software which may take up to 20 min. When completed connect to it via ssh : 
+
+
+
+## Virtual Cluster Start-up
+
+1. Checkout the git repository to your computer
+2. Download required software (Spark + Python + Zeppelin)
+3. Boot-up the Virtual Cluster
+4. Login to the Virtual Cluster
+
 ```
+git clone https://github.com/asierabreu/spark-course
+./spark-course/scripts/download_sw.sh
 cd spark-course 
 vagrant up 
 *now wait for cluster to be created and provisioned (~20 min)*
 ```
 
-4. Login to the master VM and setup password-less access between cluster machines
+5. Login to the master VM and setup password-less access between cluster machines
 
 ```
 vagrant ssh master
@@ -47,7 +65,7 @@ ssh-copy_id ubuntu@slave2
 exit
 ```
 
-5. Login to the driver VM and test Installation
+6. Login to the driver VM and test Installation
 
 Start up the pyspark shell
 ```
@@ -68,7 +86,6 @@ $SPARK_HOME/bin/spark-shell --master local[*]
 You should see a Scala shell appearing looking like this:
 
 <img src="images/scala-shell.png" width="700" height="400" align="centre">
-
 
 ## (Optional) Software Installation from scratch
 
