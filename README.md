@@ -69,7 +69,6 @@ exit
 
 Start up the pyspark shell
 ```
-vagrant ssh driver
 source /spark-course/scripts/bash_setup.sh
 $SPARK_HOME/bin/pyspark --master local[*]
 ```
