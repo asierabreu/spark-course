@@ -24,14 +24,15 @@ In order to create that vm you will first need to install the following software
 ## Virtual Machine Start-up
 
 1. Checkout the git repository to your computer
-2. Download required software (Spark + Python + Zeppelin)
-3. Boot-up the Virtual Machine 
-4. Login to the Virtual Machine
+2. Go to the checked out directory
+3. Download required software (Spark + Python + Zeppelin)
+4. Boot-up the Virtual Machine 
+5. Login to the Virtual Machine
 
 ```
 git clone https://github.com/asierabreu/spark-course
-./spark-course/scripts/download_sw.sh
 cd spark-course
+./scripts/download_sw.sh
 vagrant up
 vagrant ssh
 ```
@@ -39,14 +40,15 @@ vagrant ssh
 ## Virtual Cluster Start-up (Advanced)
 
 1. Checkout the git repository to your computer
-2. Download required software (Spark + Python + Zeppelin)
-3. Boot-up the Virtual Cluster
-4. Login to the Virtual Cluster
+2. Go to the checked out directory
+3. Download required software (Spark + Python + Zeppelin)
+4. Boot-up the Virtual Cluster
+5. Login to the Virtual Cluster
 
 ```
 git clone https://github.com/asierabreu/spark-course
-./spark-course/scripts/download_sw.sh
-cd spark-course 
+cd spark-course
+./scripts/download_sw.sh
 vagrant up 
 *now wait for cluster to be created and provisioned (~20 min)*
 ```
