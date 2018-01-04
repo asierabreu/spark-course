@@ -36,9 +36,7 @@ vagrant up
 vagrant ssh
 ```
 
-
-
-## Virtual Cluster Start-up
+## Virtual Cluster Start-up (Advanced)
 
 1. Checkout the git repository to your computer
 2. Download required software (Spark + Python + Zeppelin)
@@ -65,7 +63,7 @@ ssh-copy_id ubuntu@slave2
 exit
 ```
 
-6. Login to the driver VM and test Installation
+## Test Installation
 
 Start up the pyspark shell
 ```
