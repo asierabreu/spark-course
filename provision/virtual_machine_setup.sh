@@ -7,7 +7,7 @@ EXTENSION='.tgz'
 SPARK_TGZ=$SPARK_VERSION$EXTENSION
 ZEPPELIN_TGZ=$ZEPPELIN_VERSION$EXTENSION
 
-SW_DIR="/home/ubuntu/software"
+SW_DIR="/usr/local/software"
 
 echo "Creating software directory : $SW_DIR"  
 mkdir -p $SW_DIR
@@ -54,8 +54,5 @@ cd
 
 # Update ownership of directories and contents
 chown ubuntu:ubuntu -R $SW_DIR
-
-# Copy some executables
-cp scripts/st*.sh /usr/bin/
 
 echo 'Provisioning finished'
