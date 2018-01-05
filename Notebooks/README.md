@@ -22,8 +22,7 @@ Login to the virtual machine and start-up a PySpark application with Jupyter Not
 ```
 1. cd spark-course
 2. vagrant ssh
-3. source /spark-course/scripts/bash_setup.sh
-4. start_notebook.sh
+3. start_notebook.sh
 ```
 
 The later start-up a Jupyter notebook as the driver program of your spark application. The notebook is started up showing the contents of the Labs directory , just select the corresponding directory and notebook.
