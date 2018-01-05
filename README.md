@@ -59,9 +59,10 @@ vagrant up
 vagrant ssh master
 ssh-keygen -t rsa (and press enter to all prompts)
 cat .ssh/id_pub.rsa >> .ssh/authorized_keys
-ssh-copy-id ubuntu@driver
-ssh-copy-id ubuntu@slave1
-ssh-copy_id ubuntu@slave2
+ssh-copy-id ubuntu@driver ( and provide ubuntu password located under .vagrant.d/boxes/ubuntu-VAGRANTSLASH-xenial64/20171221.0.0/virtualbox/Vagrantfile)
+ssh-copy-id ubuntu@slave1 ( " )
+ssh-copy-id ubuntu@slave2 ( " ) 
+$SPARK_HOME/sbin/start-all.sh ( spins-up spark master and slaves in standalone mode )
 exit
 ```
 
