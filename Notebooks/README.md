@@ -14,7 +14,6 @@ Jupyter Notebooks will be used as the default tool for the hands-on sessions. We
 
 1. Spark Programming Guide: https://spark.apache.org/docs/2.2.0/programming-guide.html
 2. The Jupyter official docs : http://jupyter-notebook.readthedocs.io/en/stable/notebook.html
-3. Some Jupyter Notebooks : https://try.jupyter.org/
 
 ## Setup steps
 
