@@ -1,7 +1,7 @@
 
 # Hands-on Labs
 
-These labs will be executed using the virtual cluster created. The cluster machines runs a Linux Ubuntu 16.0.4 OS and have pre-installed the following software packages:
+These labs will be executed using a virtual machine that runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
 
 1. Java Open JDK 1.8
 2. Apache Spark 2.2.0 (including Hadoop 2.6)
@@ -18,11 +18,11 @@ Jupyter Notebooks will be used as the default tool for the hands-on sessions. We
 
 ## Setup steps
 
-Login to the virtual cluster and start-up a PySpark application with Jupyter Notebook as the driver program: 
+Login to the virtual machine and start-up a PySpark application with Jupyter Notebook as the driver program: 
 
 ```
 1. cd spark-course
-2. vagrant ssh driver
+2. vagrant ssh
 3. source /spark-course/scripts/bash_setup.sh
 4. start_notebook.sh
 ```
