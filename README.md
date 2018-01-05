@@ -19,8 +19,6 @@ In order to create that vm you will first need to install the following software
 3. Install Git : [link](https://git-scm.com/downloads)
 4. **Only Windows** : Install Putty : [link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-
-
 ## Virtual Machine Start-up
 
 1. Checkout the git repository to your computer
@@ -70,7 +68,6 @@ exit
 
 Start up the pyspark shell
 ```
-source /spark-course/scripts/bash_setup.sh
 $SPARK_HOME/bin/pyspark --master local[*]
 ```
 
