@@ -12,9 +12,9 @@ Jupyter Notebooks will be used as the default tool for the hands-on sessions. We
 
 ## References
 
-1. The Jupyter official docs : http://jupyter-notebook.readthedocs.io/en/stable/notebook.html
-2. Some Jupyter Notebooks : https://try.jupyter.org/
-3. Spark API reference : https://spark.apache.org/docs/latest/api/python/pyspark.html#pyspark.RDD
+1. Spark Programming Guide: https://spark.apache.org/docs/2.2.0/programming-guide.html
+2. The Jupyter official docs : http://jupyter-notebook.readthedocs.io/en/stable/notebook.html
+3. Some Jupyter Notebooks : https://try.jupyter.org/
 
 ## Setup steps
 
