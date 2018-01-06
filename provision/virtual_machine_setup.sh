@@ -55,4 +55,6 @@ cd
 # Update ownership of directories and contents
 chown ubuntu:ubuntu -R $SW_DIR
 
+cp /spark-course/scripts/* /usr/local/bin
+
 echo 'Provisioning finished'
