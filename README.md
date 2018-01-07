@@ -30,7 +30,7 @@ In order to create that vm you will first need to install the following software
 git clone https://github.com/asierabreu/spark-course
 cd spark-course
 ./scripts/download_sw.sh
-vagrant up
+vagrant up --provider virtualbox
 vagrant ssh
 ```
 ## Test Installation
