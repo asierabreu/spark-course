@@ -21,7 +21,7 @@ Login to the virtual machine and start-up a PySpark application with Jupyter Not
 
 ```
 1. cd spark-course
-2. vagrant ssh
+2. vagrant ssh --provider virtualbox
 3. start_notebook.sh
 ```
 
