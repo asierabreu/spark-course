@@ -29,18 +29,18 @@ The later start-up a Jupyter notebook as the driver program of your spark applic
 
 ## Labs description
 
-|Id|Description|Status|
-|--|-----------|------|
-|Lab0 | Run Spark Word Count Example   | N/A |
-|Lab1 | Introduction to Apache Spark | Not Available |
-|Lab2 | Data Analysis with Spark | Not Available |
-|Lab3 | | Not Available | 
-|Lab4 | | Not Available |
-|Lab5 | | Not Available | 
-|Lab6 | | Not Available | 
-|Lab7 | | Not Available | 
-|Lab8 | | Not Available | 
-|Lab9 | | Not Available |
-|Lab10| | Not Available | 
-|Lab11| | Not Available | 
-|Lab12| | Not Available | 
+|Id|Description|
+|--|-----------|
+|Lab0 | Run Spark Word Count Example   |
+|Lab1 | Introduction to Apache Spark |
+|Lab2 | Data Analysis Primer with Spark |
+|Lab3 | |
+|Lab4 | |
+|Lab5 | |
+|Lab6 | |
+|Lab7 | |
+|Lab8 | |
+|Lab9 | |
+|Lab10| |
+|Lab11| |
+|Lab12| |
