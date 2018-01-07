@@ -34,6 +34,25 @@ cd spark-course
 vagrant up
 vagrant ssh
 ```
+## Test Installation
+
+Start up the pyspark shell
+```
+$SPARK_HOME/bin/pyspark --master local[*]
+```
+
+You should see a PySpark shell appearing looking like this:
+
+<img src="images/pyspark-shell.png" width="700" height="400" align="centre">
+
+Start up a Scala spark shell
+```
+$SPARK_HOME/bin/spark-shell --master local[*]
+```
+
+You should see a Scala shell appearing looking like this:
+
+<img src="images/scala-shell.png" width="700" height="400" align="centre">
 
 ## Virtual Cluster Start-up (Advanced)
 
@@ -63,26 +82,6 @@ ssh-copy-id ubuntu@slave2 ( " )
 $SPARK_HOME/sbin/start-all.sh ( spins-up spark master and slaves in standalone mode )
 exit
 ```
-
-## Test Installation
-
-Start up the pyspark shell
-```
-$SPARK_HOME/bin/pyspark --master local[*]
-```
-
-You should see a PySpark shell appearing looking like this:
-
-<img src="images/pyspark-shell.png" width="700" height="400" align="centre">
-
-Start up a Scala spark shell
-```
-$SPARK_HOME/bin/spark-shell --master local[*]
-```
-
-You should see a Scala shell appearing looking like this:
-
-<img src="images/scala-shell.png" width="700" height="400" align="centre">
 
 ## (Optional) Software Installation from scratch
 
