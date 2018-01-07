@@ -25,7 +25,12 @@ Login to the virtual machine and start-up a PySpark application with Jupyter Not
 3. start_notebook.sh
 ```
 
-The later start-up a Jupyter notebook as the driver program of your spark application. The notebook is started up showing the contents of the Labs directory , just select the corresponding directory and notebook.
+The later starts-up a Jupyter notebook as the driver program of your spark application in the Virtual Machine (the guest).
+In order to accecss the application simply type the url direction appearing in the start-up log *in a browser of your computer (the host)
+Example url:
+```
+http://localhost:7070/?token=7e253c6bfa480e77984e3ff898871915e1f58fd2cd579963
+```
 
 ## Labs description
 
