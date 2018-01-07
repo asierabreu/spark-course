@@ -22,7 +22,7 @@ In order to create that vm you will first need to install the following software
 
 1. Checkout the git repository to your computer
 2. Go to the checked out directory
-3. Download required software (Spark + Python + Zeppelin)
+3. Download required course software
 4. Boot-up the Virtual Machine 
 5. Login to the Virtual Machine
 
@@ -57,7 +57,7 @@ You should see a Scala shell appearing looking like this:
 
 1. Checkout the git repository to your computer
 2. Go to the checked out directory
-3. Download required software (Spark + Python + Zeppelin)
+3. Download required course software 
 4. Boot-up the Virtual Cluster
 5. Login to the Virtual Cluster
 
