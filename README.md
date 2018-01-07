@@ -33,6 +33,14 @@ cd spark-course
 vagrant up --provider virtualbox
 vagrant ssh
 ```
+
+The following software will have been installed @ path : /usr/local/software/ (in the VM)
+
+ * Apache Spark v2.2.0
+ * Anaconda (Python) v3.6
+ * Apache Zeppelin v0.7.3
+
+
 ## Test Installation
 
 Start up the pyspark shell
@@ -68,6 +76,12 @@ cd spark-course
 vagrant up 
 *now wait for cluster to be created and provisioned (~20 min)*
 ```
+
+The following software will have been installed @ path : /usr/local/software/ (in the VM)
+
+ * Apache Spark v2.2.0
+ * Anaconda (Python) v3.6
+ * Apache Zeppelin v0.7.3  
 
 5. Login to the master VM and setup password-less access between cluster machines
 
