@@ -16,8 +16,7 @@ In order to create that vm you will first need to install the following software
 
 1. Install VirtualBox manager : [link](https://www.virtualbox.org/)
 2. Install Vagrant : [link](https://www.vagrantup.com/downloads.html)
-3. Install Git : [link](https://git-scm.com/downloads)
-4. **Only Windows** : Install Putty : [link](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+3. **Only Windows** : Install CygWin : [link](https://cygwin.com/install.html)
 
 ## Virtual Machine Start-up
 
