@@ -28,7 +28,7 @@ In order to create that vm you will first need to install the following software
 6. Boot-up the Virtual Machine 
 7. Login to the Virtual Machine
 
-The following shows the command line execution (line by line) that you should type in a terminal in your computer for steps 3 to 7
+The following shows the command line execution (line by line) that you should type in a terminal in your computer for steps 4 to 7
 
 ```
 cd spark-course
