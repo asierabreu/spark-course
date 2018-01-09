@@ -44,13 +44,13 @@ mkdir "spark/logs"
 cd 
 
 # Zeppelin 0.7.3
-# echo "Installing Apache Zeppelin ${ZEPPELIN_VERSION} ..."
-# cp spark-course/provision/$ZEPPELIN_TGZ $SW_DIR
-# cd $SW_DIR
-# tar zxf $ZEPPELIN_TGZ
-# ln -s $ZEPPELIN_VERSION zeppelin
-# mkdir "zeppelin/logs"
-# cd 
+echo "Installing Apache Zeppelin ${ZEPPELIN_VERSION} ..."
+cp /spark-course/provision/$ZEPPELIN_TGZ $SW_DIR
+cd $SW_DIR
+tar zxf $ZEPPELIN_TGZ
+ln -s $ZEPPELIN_VERSION zeppelin
+mkdir "zeppelin/logs"
+cd 
 
 # Update ownership of directories and contents
 chown ubuntu:ubuntu -R $SW_DIR
