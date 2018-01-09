@@ -20,6 +20,8 @@ In order to create that vm you will first need to install the following software
 
 ## Virtual Machine Start-up
 
+**Note** ALL steps are executed within a terminal of *your computer (not the VM)*.
+
 1. Open a terminal in your computer ( Windows users : open a cygwin terminal )
 2. Checkout the git repository to your computer (git clone https://github.com/asierabreu/spark-course)
    or **Alternatively** : download the repo from this [link](https://drive.google.com/file/d/1yIAxEoEbMRGXXmMd4D2iBtZ3qgLeMumw/view?usp=sharing) : , then unzip to your local computer
@@ -37,7 +39,7 @@ cd spark-course
 vagrant up --provider virtualbox
 vagrant ssh
 ```
-**Note** ALL steps are executed within a terminal of *your computer (not the VM)*.
+
 At the end of this process (after *vagrant ssh* you will be logged in into a VM that is running inside your computer.
 This VM has an Ubuntu 16.04 OS and has already installed the following software :
 
