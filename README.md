@@ -20,6 +20,8 @@ In order to create that vm you will first need to install the following software
 
 ## Virtual Machine Start-up
 
+**Note** You must have completed the software installation process in the previous step
+
 **Note** ALL steps are executed within a terminal of *your computer (not the VM)*.
 
 1. Open a terminal in your computer ( Windows users : open a cygwin terminal )
