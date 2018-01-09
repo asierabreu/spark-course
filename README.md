@@ -28,20 +28,22 @@ In order to create that vm you will first need to install the following software
 6. Boot-up the Virtual Machine 
 7. Login to the Virtual Machine
 
+The following shows the command line execution (line by line) that you should type in a terminal in your computer for steps 3 to 7
+
 ```
 cd spark-course
 ./scripts/download_sw.sh
 vagrant up --provider virtualbox
 vagrant ssh
 ```
+At the end of this process (After vagrant ssh you will have logged in into a VM that is running inside your computer)
+, that runs an Ubuntu 16.04 OS and has already installed the following software :
 
 The following software will have been installed @ path : /usr/local/software/ (in the VM)
 
- * Apache Spark v2.2.0
- * Anaconda (Python) v3.6
- * Apache Zeppelin v0.7.3
-
-At the end of this process (After vagrant ssh you will have logged in into a VM that is running inside your computer)
+   * Apache Spark v2.2.0
+   * Anaconda (Python) v3.6
+   * Apache Zeppelin v0.7.3
 
 ## Test Installation
 
