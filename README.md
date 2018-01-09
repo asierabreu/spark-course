@@ -23,12 +23,13 @@ In order to create that vm you will first need to install the following software
 1. Open a terminal in your computer ( Windows users : open a cygwin terminal )
 2. Checkout the git repository to your computer (git clone https://github.com/asierabreu/spark-course)
    or **Alternatively** : download the repo from this [link](https://drive.google.com/file/d/1yIAxEoEbMRGXXmMd4D2iBtZ3qgLeMumw/view?usp=sharing) : , then unzip to your local computer
-3. Go to the spark-course directory
-4. Download required course software
+3. Go to the spark-course directory you just checked-out or downloaded
+4. Execute the script that will download the required course software
 5. Boot-up the Virtual Machine 
 6. Login to the Virtual Machine
 
 The following shows the command line execution (line by line) that you should type in a terminal in your computer for steps 3 to 6
+Note that you should wait for the download script to finish, please execute line by line.
 
 ```
 cd spark-course
