@@ -29,7 +29,7 @@ In order to create that vm you will first need to install the following software
    or **Alternatively** : download the repo from this [link](https://drive.google.com/file/d/1yIAxEoEbMRGXXmMd4D2iBtZ3qgLeMumw/view?usp=sharing) : , then unzip to your local computer
 3. Go to the spark-course directory you just checked-out or downloaded
 4. Execute the script that will download the required course software
-5. Boot-up the Virtual Machine 
+5. Boot-up the Virtual Machine (Note: this step is expected to take about 15 min)
 6. Login to the Virtual Machine
 
 The following shows the command line execution (line by line) that you should type in a terminal in your computer for steps 3 to 6
