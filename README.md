@@ -20,14 +20,15 @@ In order to create that vm you will first need to install the following software
 
 ## Virtual Machine Start-up
 
-1. Checkout the git repository to your computer
-2. Go to the checked out directory
-3. Download required course software
-4. Boot-up the Virtual Machine 
-5. Login to the Virtual Machine
+1. Open a terminal in your computer ( Windows users : open a cygwin terminal )
+2. Checkout the git repository to your computer (git clone https://github.com/asierabreu/spark-course)
+3. *Alternatively* : download the repo from this [link](https://drive.google.com/file/d/1yIAxEoEbMRGXXmMd4D2iBtZ3qgLeMumw/view?usp=sharing) : , then unzip 
+4. Go to the spark-course directory
+5. Download required course software
+6. Boot-up the Virtual Machine 
+7. Login to the Virtual Machine
 
 ```
-git clone https://github.com/asierabreu/spark-course
 cd spark-course
 ./scripts/download_sw.sh
 vagrant up --provider virtualbox
@@ -40,6 +41,7 @@ The following software will have been installed @ path : /usr/local/software/ (i
  * Anaconda (Python) v3.6
  * Apache Zeppelin v0.7.3
 
+At the end of this process (After vagrant ssh you will have logged in into a VM that is running inside your computer)
 
 ## Test Installation
 
