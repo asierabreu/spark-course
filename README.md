@@ -43,7 +43,7 @@ vagrant up --provider virtualbox
 vagrant ssh
 ```
 
-At the end of this process (after *vagrant ssh* you will be logged in into a VM that is running inside your computer.
+At the end of this process (after *vagrant ssh*) you will be logged in into a VM that is running inside your computer.
 This VM has an Ubuntu 16.04 OS and has already installed the following software :
 
 The following software will have been installed @ path : /usr/local/software/ (in the VM)
