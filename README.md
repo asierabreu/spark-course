@@ -56,7 +56,7 @@ Now , do test the installation (see next).
 
 ## Test Installation
 
-Start up the pyspark shell by typing **in the VM you just logged into*
+Start up the pyspark shell by typing **in the VM you just logged into**
 
 ```
 $SPARK_HOME/bin/pyspark --master local[*]
