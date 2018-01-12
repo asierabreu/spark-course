@@ -10,7 +10,7 @@ ZEPPELIN_TGZ=$ZEPPELIN_VERSION$EXTENSION
 
 SW_DIR="/usr/local/software"
 
-if [ d "$SW_DIR" ];then
+if [ -d "$SW_DIR" ];then
   echo 'directory : $SW_DIR already existing continuing' 
 else 
   echo "Creating software directory : $SW_DIR"  
