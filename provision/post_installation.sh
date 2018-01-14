@@ -61,7 +61,7 @@ if [ -d "$ZEPPE_DIR" ];then
   echo 'zeppelin installation already existing , continuing'  
 else
   echo "Installing Apache Zeppelin ${ZEPPELIN_VERSION} ..."
-  cp /spark-course/provision/$ZEPPELIN_TGZ $SW_DIR
+  cp $HOME/spark-course/provision/$ZEPPELIN_TGZ $SW_DIR
   cd $SW_DIR
   tar zxf $ZEPPELIN_TGZ
   ln -s $ZEPPELIN_VERSION zeppelin
