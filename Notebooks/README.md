@@ -1,7 +1,6 @@
-
 # Hands-on Labs
 
-These labs will be executed using a virtual machine that runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
+These labs will mostly be executed using a virtual machine that runs a Linux Ubuntu 16.0.4 OS and has pre-installed the following software packages:
 
 1. Java Open JDK 1.8
 2. Apache Spark 2.2.0 (including Hadoop 2.6)
@@ -31,21 +30,3 @@ Example url:
 ```
 http://localhost:7070/?token=7e253c6bfa480e77984e3ff898871915e1f58fd2cd579963
 ```
-
-## Labs description
-
-|Id|Description|
-|--|-----------|
-|Lab0 | Run Spark Word Count Example   |
-|Lab1 | Introduction to Apache Spark |
-|Lab2 | Data Analysis Primer with Spark |
-|Lab3 | |
-|Lab4 | |
-|Lab5 | |
-|Lab6 | |
-|Lab7 | |
-|Lab8 | |
-|Lab9 | |
-|Lab10| |
-|Lab11| |
-|Lab12| |
