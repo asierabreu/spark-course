@@ -8,10 +8,18 @@ apt-get update
 echo 'Installing Apache Ambari server ...' 
 apt-get -qq install ambari-server
 
-# Setup. There are several options to configure during setup.
-echo 'Setting up Apache Ambari server ...'
+cho 'Setting up Apache Ambari server ...'
 ambari-server setup -s
-     
-# Start Ambari Server
-echo 'Starting Apache Ambari server ...'
-ambari-server start
+
+echo 'Installing Apache Ambari agent ...' 
+apt-get -qq install ambari-agent
+
+echo 'Setting up Apache Ambari agent ...'
+machine_ip=$(cat /etc/hostname)
+tee "/etc/ambari-agent/conf/ambari-agent.ini" > "/dev/null"<<EOF
+[server]
+hostname=$(cat /etc/hostname)
+url_port=8440
+secured_url_port=8441
+EOF
+echo 'Done.'
