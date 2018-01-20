@@ -21,5 +21,8 @@ tee "/etc/ambari-agent/conf/ambari-agent.ini" > "/dev/null"<<EOF
 hostname=$(cat /etc/hostname)
 url_port=8440
 secured_url_port=8441
+piddir=/var/run/ambari-agent/
+logdir=/var/log/ambari-agent/
+keysdir=/root/.ssh/
 EOF
 echo 'Done.'
