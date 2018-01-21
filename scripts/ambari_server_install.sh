@@ -4,6 +4,10 @@ wget -O /etc/apt/sources.list.d/ambari.list http://public-repo-1.hortonworks.com
 apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
 apt-get update
 
+echo 'Installing ntp service ...'
+apt-get -qq install ntp
+service ntp restart
+
 # Install Ambari
 echo 'Installing Apache Ambari server ...' 
 apt-get -qq install ambari-server
