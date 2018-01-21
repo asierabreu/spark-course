@@ -8,7 +8,7 @@ apt-get update
 echo 'Installing Apache Ambari server ...' 
 apt-get -qq install ambari-server
 
-cho 'Setting up Apache Ambari server ...'
+echo 'Setting up Apache Ambari server ...'
 ambari-server setup -s
 
 echo 'Installing Apache Ambari agent ...' 
