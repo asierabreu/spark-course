@@ -4,6 +4,10 @@ wget -O /etc/apt/sources.list.d/ambari.list http://public-repo-1.hortonworks.com
 apt-key adv --recv-keys --keyserver keyserver.ubuntu.com B9733A7A07513CAD
 apt-get update
 
+echo 'Installing ntp service ...'
+apt-get -qq install ntp
+service ntp restart
+
 echo 'Installing Apache Ambari agent ...' 
 apt-get -qq install ambari-agent
 
@@ -58,6 +62,11 @@ idle_interval_max=10
 
 [logging]
 syslog_enabled = 0
-
 EOF
+
+# Disable Transparent huge pages to avoid Hadoop performance issues
+sudo su
+echo "never" > /sys/kernel/mm/transparent_hugepage/enabled
+
+
 echo 'Done.'
