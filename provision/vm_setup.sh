@@ -13,7 +13,7 @@ SW_DIR="/usr/local/software"
 PROVISION_DIR=$1
 
 if [ -z $PROVISION_DIR];then
-  echo 'Must provide a path to the downloaded software location! (./provision.sh <software_packages_loaction>)'
+  echo 'Must provide a path to the downloaded software location! (./vm_setup.sh <software_packages_loaction>)'
   exit 
 fi  
 
