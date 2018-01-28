@@ -13,6 +13,7 @@ export SPARK_HOME="/usr/local/software/spark"
 export ZEPPELIN_HOME="/usr/local/software/zeppelin"
 export CONDA_HOME="/usr/local/software/conda"
 export PATH="/usr/local/software/conda/bin:/usr/local/software/spark/bin:/usr/local/software/spark/sbin:/usr/local/software/zeppelin/bin:$PATH"
+EOF
 SCRIPT
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
