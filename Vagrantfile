@@ -34,19 +34,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       m.vm.hostname = "master.mycluster"
       m.vm.network "private_network", ip: "192.168.0.10"
       m.vm.provider :virtualbox do |vb|
-        vb.memory = "6144"
+        vb.memory = "4096"
       end
-	  m.vm.network "forwarded_port", guest: 8080, host: 8080
+      m.vm.network "forwarded_port", guest: 8080, host: 8080
       m.vm.network "forwarded_port", guest: 7070, host: 7070
-	  m.vm.network "forwarded_port", guest: 4040, host: 4040
-      m.vm.network "forwarded_port", guest: 80, host: 80
+      m.vm.network "forwarded_port", guest: 4040, host: 4040
     end
 	 
-    # Shell provisioning (software installations)
-    config.vm.provision "shell" do |s|
-    	s.path = "provision/virtual_machine_setup.sh"	
-	end
-	
-	# Shell provisioning (environment setup)
-	config.vm.provision "shell", inline: $set_env_vars, run: "always"
+    # Shell provisioning (environment setup)
+    config.vm.provision "shell", inline: $set_env_vars, run: "always"
 end
