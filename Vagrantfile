@@ -28,7 +28,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	
     # Setup synced folder ( disable default name and mount it with a telling name )
     config.vm.synced_folder ".", "/vagrant", disabled: true
-    config.vm.synced_folder ".", "/spark-course", create: true
 	
     # Master
     config.vm.define :master do |m|
