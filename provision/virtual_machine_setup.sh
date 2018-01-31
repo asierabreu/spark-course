@@ -10,6 +10,13 @@ ZEPPELIN_TGZ=$ZEPPELIN_VERSION$EXTENSION
 
 SW_DIR="/usr/local/software"
 
+PROVISION_DIR=$1
+
+if [ -z $PROVISION_DIR];then
+  echo 'Must provide a path to the downloaded software location! (./vm_setup.sh <software_packages_loaction>)'
+  exit 
+fi  
+
 if [ -d "$SW_DIR" ];then
   echo 'directory : $SW_DIR already existing continuing' 
 else 
@@ -41,37 +48,37 @@ if [ -d "$CONDA_DIR" ];then
   echo 'conda installation already existing , continuing'  
 else
   echo "Installing Anaconda (Python 3.6) ..."
-  bash /spark-course/provision/$CONDA_INST -b -p $CONDA_DIR
+  bash $PROVISION_DIR/$CONDA_INST -b -p $CONDA_DIR
 fi
   
-# Spark 2.2.0
+# Spark 
 if [ -d "$SPARK_DIR" ];then
   echo 'spark installation already existing , continuing'  
 else
   echo "Installing Apache Spark ${SPARK_VERSION} ..."
-  cp /spark-course/provision/$SPARK_TGZ $SW_DIR
+  cp $PROVISION_DIR/$SPARK_TGZ $SW_DIR
   cd $SW_DIR
   tar zxf $SPARK_TGZ
   ln -s $SPARK_VERSION spark
   mkdir "spark/logs"
   cd 
 fi
-# Zeppelin 0.7.3
-#if [ -d "$ZEPPE_DIR" ];then
-#  echo 'zeppelin installation already existing , continuing'  
-#else
-#  echo "Installing Apache Zeppelin ${ZEPPELIN_VERSION} ..."
-#  cp /spark-course/provision/$ZEPPELIN_TGZ $SW_DIR
-#  cd $SW_DIR
-#  tar zxf $ZEPPELIN_TGZ
-#  ln -s $ZEPPELIN_VERSION zeppelin
-#  mkdir "zeppelin/logs"
-#  cd 
-#fi
+# Zeppelin 
+if [ -d "$ZEPPE_DIR" ];then
+  echo 'zeppelin installation already existing , continuing'  
+else
+  echo "Installing Apache Zeppelin ${ZEPPELIN_VERSION} ..."
+  cp $PROVISION_DIR/$ZEPPELIN_TGZ $SW_DIR
+  cd $SW_DIR
+  tar zxf $ZEPPELIN_TGZ
+  ln -s $ZEPPELIN_VERSION zeppelin
+  mkdir "zeppelin/logs"
+  cd 
+fi
 
 # Update ownership of directories and contents
 chown ubuntu:ubuntu -R $SW_DIR
 
-cp /spark-course/scripts/* /usr/local/bin/
+cp spark-course/scripts/* /usr/local/bin/
 
 echo 'Provisioning finished'
