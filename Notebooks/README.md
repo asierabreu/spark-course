@@ -21,7 +21,7 @@ Login to the virtual machine and start-up a PySpark application with Jupyter Not
 ```
 1. cd spark-course
 2. vagrant ssh --provider virtualbox
-3. start_notebook.sh
+3. (*Inside the VM*) start_notebook.sh
 ```
 
 The later starts-up a Jupyter notebook as the driver program of your spark application in the Virtual Machine (the guest).
@@ -30,3 +30,15 @@ Example url:
 ```
 http://localhost:7070/?token=7e253c6bfa480e77984e3ff898871915e1f58fd2cd579963
 ```
+If you cannot copy this token you will need to setup token-less access. In order to do that:
+
+*In the VM type*
+
+```
+1. cd
+2. $CONDA_HOME/bin/jupyter notebook --generate-config ( this command will create a file under $HOME/.jupyter named )
+3. Edit the file and update line : #c.NotebookApp.token='<generated>' to be c.NotebookApp.token=''
+4. Save the file
+5. Re-start the notebook : start_notebook.sh
+```
+
