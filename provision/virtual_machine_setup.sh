@@ -64,17 +64,17 @@ else
   cd 
 fi
 # Zeppelin 
-if [ -d "$ZEPPE_DIR" ];then
-  echo 'zeppelin installation already existing , continuing'  
-else
-  echo "Installing Apache Zeppelin ${ZEPPELIN_VERSION} ..."
-  cp $PROVISION_DIR/$ZEPPELIN_TGZ $SW_DIR
-  cd $SW_DIR
-  tar zxf $ZEPPELIN_TGZ
-  ln -s $ZEPPELIN_VERSION zeppelin
-  mkdir "zeppelin/logs"
-  cd 
-fi
+#if [ -d "$ZEPPE_DIR" ];then
+#  echo 'zeppelin installation already existing , continuing'  
+#else
+#  echo "Installing Apache Zeppelin ${ZEPPELIN_VERSION} ..."
+#  cp $PROVISION_DIR/$ZEPPELIN_TGZ $SW_DIR
+#  cd $SW_DIR
+#  tar zxf $ZEPPELIN_TGZ
+#  ln -s $ZEPPELIN_VERSION zeppelin
+#  mkdir "zeppelin/logs"
+#  cd 
+#fi
 
 # Update ownership of directories and contents
 chown ubuntu:ubuntu -R $SW_DIR
