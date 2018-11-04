@@ -75,7 +75,7 @@ else
   cp $PROVISION_DIR/$ZEPPE_TGZ $SW_DIR
   cd $SW_DIR
   tar zxf $ZEPPE_TGZ
-  ln -s $ZEPPELIN_VERSION zeppelin
+  ln -s $ZEPPE_VERSION zeppelin
   mkdir "zeppelin/logs"
   cd $HOME/spark-course
 fi
