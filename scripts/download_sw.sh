@@ -7,7 +7,7 @@ if [ ! -d "$PROVISION_DIR" ];then
 fi
 
 # specify version to be downloaded
-ANACONDA='Anaconda3-latest-Linux-x86_64.sh'
+ANACONDA='Anaconda3-5.3.0-Linux-x86_64.sh'
 MINICONDA='Miniconda3-latest-Linux-x86_64.sh'
 SPARK='spark-2.3.2/spark-2.3.2-bin-hadoop2.7.tgz'
 ZEPPELIN='zeppelin-0.8.0/zeppelin-0.8.0-bin-all.tgz'
