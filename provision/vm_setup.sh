@@ -12,7 +12,7 @@ JAVA_VERSION='openjdk-8-jre-headless' # fixed
 
 SPARK_TGZ=$(basename $(ls -1 $PROVISION_DIR/spark-*))
 ZEPPE_TGZ=$(basename $(ls -1 $PROVISION_DIR/zeppelin-*))
-CONDA_TSH=$(basename $(ls -1 $PROVISION_DIR/Miniconda-*))
+CONDA_TSH=$(basename $(ls -1 $PROVISION_DIR/*conda*))
 
 SPARK_VERSION="${SPARK_TGZ%.*}"
 ZEPPE_VERSION="${ZEPPE_TGZ%.*}"
