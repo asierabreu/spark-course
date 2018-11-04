@@ -2,7 +2,7 @@
 
 PROVISION_DIR=$1
 
-if [ -z $PROVISION_DIR];then
+if [ -z $PROVISION_DIR ];then
   echo 'Must provide a path to the downloaded software location! (./vm_setup.sh <software_packages_loaction>)'
   exit 
 fi  
