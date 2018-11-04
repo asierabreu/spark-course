@@ -2,51 +2,27 @@
 
 This repository contains all necessary inputs to run the course hands-on labs. 
 
-## Repository contents
+## Repository Contents
 
 * **Notebooks** : contains Jupyter Notebooks for the hands-on Labs
 * **data** : contains input datasets for the labs
 * **provision** : holds the bash provisioning scripts for the Virtual Machine
 * **scripts** : useful scripts
 
-## Software Installation
+## Required Software 
 
 For the course hands-on sessions we will use (mostly) a virtual machine.
 In order to create that vm you will first need to install the following software :
 
 1. Install VirtualBox manager : [link](https://www.virtualbox.org/)
-2. Install Vagrant : [link](https://www.vagrantup.com/downloads.html)
-3. Install Git : [link](https://git-scm.com/downloads)
-4. **Only Windows** : Install CygWin : [link](https://cygwin.com/install.html)
 
-## Virtual Machine Start-up
+## Download and Start-Up a Virtual Machine
 
-**Note** You must have completed the software installation process in the previous step
+1. Download to your computer the 'spark-course' VM (.ova) file located under folder : vm of this repository
+1. Start-up the VirtualBox manager and import the .ova virtual machine 
+2. Boot-up this VM
 
-**Note** ALL steps are executed within a terminal of *your computer (not the VM)*.
-
-1. Open a terminal in your computer ( Windows users : open a cygwin terminal )
-2. Check out the git repository : git clone http://github.com/asierabreu/spark-course  
-3. **Alternatively** Download the repo directly from this [link](https://drive.google.com/file/d/1yIAxEoEbMRGXXmMd4D2iBtZ3qgLeMumw/view?usp=sharing) : , then unzip to your local computer
-4. Go to the spark-course directory you just checked-out or downloaded
-5. Execute the script that will download the required course software
-6. Boot-up the Virtual Machine (Note: this step is expected to take about 15 min)
-7. Login to the Virtual Machine
-
-The following shows the command line execution (line by line) that you should type in a terminal in your computer for steps 4 to 7
-Note that you should wait for the download script to finish, please execute line by line.
-
-```
-cd spark-course
-./scripts/download_sw.sh
-vagrant up --provider virtualbox
-vagrant ssh
-```
-
-At the end of this process (after *vagrant ssh*) you will be logged in into a VM that is running inside your computer.
-This VM has an Ubuntu 16.04 OS and has already installed the following software :
-
-The following software will have been installed @ path : /usr/local/software/ (in the VM)
+The following software is pre-installed @ path : /usr/local/software/ inside the VM
 
    * Apache Spark v2.2.0
    * Anaconda (Python) v3.6
