@@ -18,13 +18,13 @@ SPARK_VERSION="${SPARK_TGZ%.*}"
 ZEPPE_VERSION="${ZEPPE_TGZ%.*}"
 CONDA_VERSION="${CONDA_TSH%.*}"
 echo '-----------------------------------'
-echo ' '
+echo '-----------------------------------'
 echo ' '
 echo 'Spark Version    : ' $SPARK_VERSION
 echo 'Zeppelin Version : ' $ZEPPE_VERSION
 echo 'Conda Version    : ' $CONDA_VERSION
 echo ' '
-echo ' '
+echo '-----------------------------------'
 echo '-----------------------------------'
 
 SW_DIR="/usr/local/software/"
@@ -65,7 +65,7 @@ else
   tar zxf $SPARK_TGZ
   ln -s $SPARK_VERSION spark
   mkdir "spark/logs"
-  cd 
+  cd $HOME/spark-course
 fi
 # Zeppelin 
 if [ -d "$ZEPPE_DIR" ];then
@@ -77,7 +77,7 @@ else
   tar zxf $ZEPPE_TGZ
   ln -s $ZEPPELIN_VERSION zeppelin
   mkdir "zeppelin/logs"
-  cd 
+  cd $HOME/spark-course
 fi
 
 # Anaconda (Python with some extra interesting stuff) in silent mode , i.e, no prompts
@@ -91,6 +91,6 @@ fi
 # Update ownership of directories and contents
 chown ubuntu:ubuntu -R $SW_DIR
 
-cp spark-course/scripts/* /usr/local/bin/
+cp $HOME/spark-course/scripts/* /usr/local/bin/
 
 echo 'Provisioning finished'
