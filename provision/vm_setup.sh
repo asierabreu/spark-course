@@ -52,18 +52,9 @@ apt-get -qq install ntp
 update-rc.d ntp defaults
 
 # Open JDK
- echo "Installing Java ..."
+echo "Installing Java ..."
 apt-get -qq install $JAVA_VERSION
-
-# Anaconda (Python with some extra interesting stuff) in silent mode , i.e, no prompts
-
-if [ -d "$CONDA_DIR" ];then
-  echo 'conda installation already existing , continuing'  
-else
-  echo "Installing Anaconda ..."
-  bash $PROVISION_DIR/$CONDA_TSH -b -p $CONDA_DIR
-fi
-  
+ 
 # Spark 
 if [ -d "$SPARK_DIR" ];then
   echo 'spark installation already existing , continuing'  
@@ -87,6 +78,14 @@ else
   ln -s $ZEPPELIN_VERSION zeppelin
   mkdir "zeppelin/logs"
   cd 
+fi
+
+# Anaconda (Python with some extra interesting stuff) in silent mode , i.e, no prompts
+if [ -d "$CONDA_DIR" ];then
+  echo 'conda installation already existing , continuing'  
+else
+  echo "Installing Anaconda ..."
+  bash $PROVISION_DIR/$CONDA_TSH -b -p $CONDA_DIR
 fi
 
 # Update ownership of directories and contents
