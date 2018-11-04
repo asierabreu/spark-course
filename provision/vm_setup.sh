@@ -38,7 +38,7 @@ fi
 
 SPARK_DIR="$SW_DIR/spark"
 ZEPPE_DIR="$SW_DIR/zeppelin"
-CONDA_DIR="$SW_DIR/miniconda"
+CONDA_DIR="$SW_DIR/conda"
 
 if [ ! -d "$SW_DIR" ];then
   echo 'could not create directory : $SW_DIR aborting installation' 
