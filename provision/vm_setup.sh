@@ -17,10 +17,15 @@ CONDA_TSH=$(basename $(ls -1 $PROVISION_DIR/Miniconda-*))
 SPARK_VERSION="${SPARK_TGZ%.*}"
 ZEPPE_VERSION="${ZEPPE_TGZ%.*}"
 CONDA_VERSION="${CONDA_TSH%.*}"
-
-echo 'Spark Version : ' $SPARK_VERSION
+echo '-----------------------------------'
+echo ' '
+echo ' '
+echo 'Spark Version    : ' $SPARK_VERSION
 echo 'Zeppelin Version : ' $ZEPPE_VERSION
-echo 'Conda Version : ' $CONDA_VERSION
+echo 'Conda Version    : ' $CONDA_VERSION
+echo ' '
+echo ' '
+echo '-----------------------------------'
 
 SW_DIR="/usr/local/software/"
 
@@ -47,6 +52,7 @@ apt-get -qq install ntp
 update-rc.d ntp defaults
 
 # Open JDK
+ echo "Installing Java ..."
 apt-get -qq install $JAVA_VERSION
 
 # Anaconda (Python with some extra interesting stuff) in silent mode , i.e, no prompts
