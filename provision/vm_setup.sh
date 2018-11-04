@@ -95,6 +95,6 @@ echo "Updating environment ..."
 # Copy some executables to the path
 cp $HOME/spark-course/scripts/* /usr/local/bin/
 # Update the bashrc to call the environment variables setup
-cp 'source $HOME/spark-course/scripts/bash_profile' $HOME/.bash_profile
+cp '$HOME/spark-course/scripts/bash_profile' $HOME/.bash_profile
 
 echo 'Provisioning finished'
