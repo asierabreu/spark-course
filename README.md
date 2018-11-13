@@ -8,6 +8,7 @@ This repository contains all necessary inputs to run the course hands-on labs.
 * **data** : contains input datasets for the labs
 * **provision** : holds the bash provisioning scripts for the Virtual Machine
 * **scripts** : useful scripts
+* **vm** : contains the course virtual machine (.ova file)
 
 ## Required Software 
 
@@ -18,9 +19,9 @@ In order to create that vm you will first need to install the following software
 
 ## Download and Start-Up a Virtual Machine
 
-1. Download to your computer the 'spark-course' VM (.ova) file located under folder : vm of this repository
-1. Start-up the VirtualBox manager and import the .ova virtual machine 
-2. Boot-up this VM
+1. Download to your computer the 'spark-course' VM (.ova) file located under folder : **vm** of this repository
+2. Start-up the VirtualBox manager and import the .ova virtual machine (File --> Import Appliance)
+3. Boot-up this VM and login , user : ubuntu : password : ubuntu
 
 The following software is pre-installed @ path : /usr/local/software/ inside the VM
 
