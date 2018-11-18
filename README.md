@@ -25,8 +25,8 @@ In order to create that vm you will first need to install the following software
 
 The following software is pre-installed @ path : /usr/local/software/ inside the VM
 
+   * Anaconda
    * Apache Spark 
-   * Miniconda
    * Apache Zeppelin
 
 Now , do test the installation (see next).
